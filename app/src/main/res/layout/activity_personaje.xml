@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#101010">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- IMAGEN DEL PERSONAJE -->
+        <ImageView
+            android:id="@+id/ivImagenClase"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/personaje1"
+            android:contentDescription="Imagen del personaje"
+            android:scaleType="centerCrop"
+            android:background="@drawable/borde_redondeado" />
+
+        <!-- NOMBRE EDITABLE -->
+        <EditText
+            android:id="@+id/etNombreEditable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del personaje"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/black"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/caja_texto" />
+
+        <!-- NOMBRE DE LA CLASE -->
+        <TextView
+            android:id="@+id/tvNombreClase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clase"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp" />
+
+        <!-- DESCRIPCIÓN DE LA CLASE -->
+        <TextView
+            android:id="@+id/tvDescripcionClase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción del personaje"
+            android:textColor="#CCCCCC"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- CONTENEDOR DE STATS -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:background="@drawable/caja_stats">
+
+            <TextView
+                android:id="@+id/txtStatAtaque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ataque: 0"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtStatDefensa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Defensa: 0"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/txtStatVida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vida: 0"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/txtStatMagia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Magia: 0"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/txtStatSuerte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suerte: 0"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+        <!-- BOTONES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="25dp">
+
+            <Button
+                android:id="@+id/btnAtras"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Atrás" />
+
+            <Button
+                android:id="@+id/btnCrearPersonaje"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Guardar"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/btnSiguiente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Siguiente" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+

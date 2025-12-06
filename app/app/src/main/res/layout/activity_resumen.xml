@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/fondo_principal"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        LinearLayout principal:
+        - Organiza los elementos en columna (vertical).
+        - Centra todo su contenido
+        - Aplica un color de fondo definido en los recursos .
+        - padding: agrega espacio interno de 20dp alrededor.
+        - match_parent: ocupa todo el ancho y alto de la pantalla.
+    -->
+
+    <!-- Título de la pantalla de resumen -->
+    <TextView
+        android:id="@+id/tituloResumen"
+        android:text="@string/resumen"
+        android:textColor="@color/texto_principal"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- ScrollView permite que la lista de personajes sea desplazable verticalmente -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Contenedor dinámico donde se insertarán los personajes desde el código -->
+        <LinearLayout
+            android:id="@+id/contenedorPersonajes"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+    </ScrollView>
+
+    <!-- Texto informativo al usuario -->
+    <TextView
+        android:text="@string/estan_bien_los_datos"
+        android:textColor="#90A4AE"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <!-- Contenedor para los botones de acción -->
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- Botón de confirmación -->
+        <Button
+            android:id="@+id/btnAceptar"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/aceptar"
+            android:textColor="#00796B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Botón de cancelación -->
+        <Button
+            android:id="@+id/btnCancelar"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/cancelar"
+            android:textColor="#00796B"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

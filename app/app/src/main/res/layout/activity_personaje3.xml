@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/fondo_principal"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        LinearLayout principal:
+        - Organiza los elementos en columna (vertical).
+        - Centra todo su contenido
+        - Aplica un color de fondo definido en los recursos .
+        - padding: agrega espacio interno de 20dp alrededor.
+        - match_parent: ocupa todo el ancho y alto de la pantalla.
+    -->
+
+    <!-- Título con el nombre del personaje -->
+    <TextView
+        android:text="@string/personaje_3"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/texto_principal"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Imagen del personaje -->
+    <ImageView
+        android:id="@+id/imagenPersonaje3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/personaje_3"
+        android:background="@color/purple_700"
+        android:src="@drawable/personaje3"
+        android:layout_gravity="center" />
+
+    <!-- Texto que indica que el usuario debe poner el nombre -->
+    <TextView
+        android:text="@string/nombre_del_personaje"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor= "#00796B"/>
+
+    <!-- Campo de texto donde el usuario escribe el nombre del personaje -->
+    <EditText
+        android:id="@+id/nombre3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/boton_fondo"
+        android:textColor="@color/texto_principal"
+        android:textColorHint="@color/campo_texto_hint"
+        android:autofillHints="name"
+        android:hint="@string/escribe_un_nombre"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <!-- Contenedor para los botones "Atras", "Borrar" y "Siguiente" -->
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- Botón para volver a la pastaña del personaje anterior. -->
+        <Button
+            android:id="@+id/btnAtras3"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/atras"
+            android:textColor="#00796B" />
+
+        <!-- Botón para borrar el nombre escrito -->
+        <Button
+            android:id="@+id/btnBorrar3"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/borrar"
+            android:textColor="#00796B" />
+
+        <!-- Botón para pasar al resumen de los personajes. -->
+        <Button
+            android:id="@+id/btnSiguiente3"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/siguiente"
+            android:textColor="#00796B" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Tarea_3</string>
+    <string name="txttitulo">Registro de Personajes</string>
+    <string name="txtIniciar">Iniciar</string>
+    <string name="txtSalir">Salir</string>
+    <string name="personaje_1">Personaje 1</string>
+    <string name="aqui_va_tu_imagen">Aquí va tu imagen</string>
+    <string name="nombre_del_personaje">Nombre del personaje:</string>
+    <string name="escribe_un_nombre">Escribe un nombre</string>
+    <string name="borrar">Borrar</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="personaje_2">Personaje 2</string>
+    <string name="personaje_3">Personaje 3</string>
+    <string name="atras">Atrás</string>
+    <string name="resumen">Resumen</string>
+    <string name="estan_bien_los_datos">¿Esta seguro de los datos?</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="formato_personaje">Personaje %1$d: %2$s</string>
+    <string name="nombres_confirmados">Nombres confirmados </string>
+    <string name="operacion_cancelada">Operación cancelada </string>
+</resources>

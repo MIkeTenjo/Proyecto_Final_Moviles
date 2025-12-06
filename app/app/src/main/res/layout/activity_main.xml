@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/purple_700"
+    android:padding="24dp">
+
+    <!--
+        LinearLayout: contenedor principal que organiza sus elementos de forma vertical.
+        - match_parent: ocupa todo el ancho y alto de la pantalla.
+        - orientation="vertical": los elementos se apilan uno debajo del otro.
+        - gravity="center": centra los elementos en el eje horizontal.
+        - background: color de fondo definido.
+        - padding: separación interna de 24dp alrededor de todo el contenido.
+    -->
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txttitulo"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/boton_fondo"
+        android:layout_marginBottom="60dp" />
+
+    <!--
+            TextView: muestra el título principal en pantalla.
+            - id: identificador para acceder desde el código Kotlin/Java.
+            - text: texto definido en el archivo strings.xml
+            - textSize: tamaño del texto en sp (26sp).
+            - textStyle="bold": texto en negritas.
+            - textColor: color del texto tomado.
+            - marginBottom: espacio de 60dp debajo del texto para separar del siguiente elemento.
+        -->
+
+    <Button
+        android:id="@+id/btnIniciar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/txtIniciar"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginBottom="24dp" />
+
+    <!--
+            Botón: “Iniciar”.
+            - id: btnIniciar  se usará para manejar su acción en el código.
+            - tamaño fijo de 200dp de ancho y altura automática.
+            - texto: valor tomado del archivo strings.xml.
+            - backgroundTint: color verde (hex #4CAF50).
+            - textColor: texto blanco.
+            - textSize: tamaño del texto 18sp.
+            - marginBottom: separación inferior de 24dp para el siguiente botón.
+        -->
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/txtSalir"
+        android:backgroundTint="#F44336"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <!--
+            Botón “Salir”.
+            - id: btnSalir  identificador para su acción (cerrar app o volver atrás).
+            - mismo tamaño que el botón anterior.
+            - texto: se obtiene del archivo strings.xml
+            - backgroundTint: color rojo.
+            - textColor: texto blanco.
+            - textSize: tamaño de texto 18sp.
+        -->
+
+</LinearLayout>
