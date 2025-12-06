@@ -14,4 +14,5 @@
     <color name="campo_texto_fondo">#1E293B</color>
     <color name="campo_texto_hint">#90A4AE</color>
     <color name="color_resumen">#00E5FF</color>
+    <color name="purpura">#800080</color>
 </resources>

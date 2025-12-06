@@ -9,7 +9,6 @@ class Equipo {
     fun equipar(armadura: Armadura, personaje: Personaje) {
         val tipo = armadura.tipo
 
-        // Si ya está equipada, removerla
         equipadas[tipo]?.remover(personaje)
 
         equipadas[tipo] = armadura

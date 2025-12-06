@@ -21,5 +21,6 @@
     <string name="operacion_cancelada">Operación cancelada </string>
     <string name="open_drawer">Abrir menú</string>
     <string name="close_drawer">Cerrar menú</string>
+    <string name="empezar">Empezar</string>
 
 </resources>

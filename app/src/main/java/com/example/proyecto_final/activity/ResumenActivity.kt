@@ -51,9 +51,7 @@ class ResumenActivity : AppCompatActivity() {
 
         numeroPartida = intent.getIntExtra("numPartida", -1)
 
-        /** ------------------------------
-         *    CONFIGURAR TOOLBAR Y HAMBURGUESA
-         * ------------------------------ */
+
         setSupportActionBar(toolbar)
 
         toggle = ActionBarDrawerToggle(
@@ -65,19 +63,14 @@ class ResumenActivity : AppCompatActivity() {
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
-        /** ------------------------------
-         *   MANEJAR CLICS EN EL NAVIGATIONVIEW
-         * ------------------------------ */
         navView.setNavigationItemSelectedListener { item ->
             Toast.makeText(this, "Click: ${item.title}", Toast.LENGTH_SHORT).show()
             drawer.closeDrawers()
             true
         }
 
-        /** ------------------------------ */
         cargarMenuPartidas()
         cargarPartidaDesdeBD()
-        /** ------------------------------ */
 
         btnAceptar.setOnClickListener {
             Toast.makeText(this, "Datos confirmados", Toast.LENGTH_SHORT).show()
@@ -96,9 +89,6 @@ class ResumenActivity : AppCompatActivity() {
         else super.onOptionsItemSelected(item)
     }
 
-    /** ------------------------------
-     *     CARGAR MENU LATERAL
-     * ------------------------------ */
     private fun cargarMenuPartidas() {
         thread {
             val dao = BaseDatos.getDatabase(this).partidaDao()
@@ -135,9 +125,6 @@ class ResumenActivity : AppCompatActivity() {
         }
     }
 
-    /** ------------------------------
-     *      CARGAR PARTIDA ACTUAL
-     * ------------------------------ */
     private fun cargarPartidaDesdeBD() {
         thread {
             val dao = BaseDatos.getDatabase(this).partidaDao()

@@ -1,5 +1,6 @@
 package com.example.proyecto_final.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -23,21 +24,19 @@ class PersonajeAdapter(
         startDragListener = listener
     }
 
-    /** ------------------------- VIEW HOLDER ------------------------- */
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imgPersonaje: ImageView = view.findViewById(R.id.imgPersonaje)
         val txtNombre: TextView = view.findViewById(R.id.txtNombre)
         val handleDrag: ImageView = view.findViewById(R.id.handleDrag)
     }
 
-    /** ------------------------- INFLATE ------------------------- */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_personaje_resumen, parent, false)
         return ViewHolder(v)
     }
 
-    /** ------------------------- BIND ------------------------- */
+    @SuppressLint("ClickableViewAccessibility")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val personaje = personajes[position]
 
@@ -47,7 +46,7 @@ class PersonajeAdapter(
         // Imagen (si tiene, sino default)
         if (personaje.imagen != null) {
             Glide.with(holder.itemView)
-                .load(personaje.imagen!!) // ← AQUÍ EL CAMBIO
+                .load(personaje.imagen!!)
                 .into(holder.imgPersonaje)
         } else {
             holder.imgPersonaje.setImageResource(R.drawable.personaje1)
@@ -69,7 +68,7 @@ class PersonajeAdapter(
 
     override fun getItemCount(): Int = personajes.size
 
-    /** ------------------------- MOVER / REORDENAR ------------------------- */
+    //Mover y reordenar
     fun moverItem(desde: Int, hacia: Int) {
         val item = personajes.removeAt(desde)
         personajes.add(hacia, item)

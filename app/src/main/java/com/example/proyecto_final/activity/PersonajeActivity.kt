@@ -17,7 +17,6 @@ class PersonajeActivity : AppCompatActivity() {
 
     private lateinit var db: BaseDatos
 
-    // UI
     private lateinit var ivImagenClase: ImageView
     private lateinit var tvNombreClase: TextView
     private lateinit var tvDescripcionClase: TextView
@@ -68,19 +67,19 @@ class PersonajeActivity : AppCompatActivity() {
 
         btnGuardar.setOnClickListener { guardarPersonaje() }
 
-        // --------------------- BOTÓN ATRÁS ---------------------
+        // para atras a resumen
         btnAtras.setOnClickListener {
             when (numeroPersonaje) {
-                1 -> irAResumen()                           // ⬅️ Regresar al resumen si es personaje 1
-                else -> abrirPersonaje(numeroPersonaje - 1) // ⬅️ Personaje anterior
+                1 -> irAResumen()                           // Regresar al resumen si es personaje 1
+                else -> abrirPersonaje(numeroPersonaje - 1) //  Personaje anterior
             }
         }
 
-        // --------------------- BOTÓN SIGUIENTE ---------------------
+        // siguiente a resumen
         btnSiguiente.setOnClickListener {
             when (numeroPersonaje) {
-                3 -> irAResumen()                           // ⬅️ Ir al resumen si es personaje 3
-                else -> abrirPersonaje(numeroPersonaje + 1) // ⬅️ Personaje siguiente
+                3 -> irAResumen()                           //  Ir al resumen si es personaje 3
+                else -> abrirPersonaje(numeroPersonaje + 1) //  Personaje siguiente
             }
         }
     }
@@ -102,7 +101,7 @@ class PersonajeActivity : AppCompatActivity() {
         }
     }
 
-    // -------------------- MOSTRAR DATOS --------------------
+    //mostrar datos
 
     private fun actualizarVista() {
         val p = personajeActual ?: return
@@ -144,7 +143,7 @@ class PersonajeActivity : AppCompatActivity() {
             else -> R.drawable.personaje1
         }
 
-    // -------------------- GUARDAR PERSONAJE --------------------
+    //guardar personaje
 
     private fun guardarPersonaje() {
         val p = personajeActual ?: return
@@ -192,8 +191,6 @@ class PersonajeActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-
-    // -------------------- CREACIÓN --------------------
 
     private fun crearPersonajeVacio(): Personaje {
         return Personaje(

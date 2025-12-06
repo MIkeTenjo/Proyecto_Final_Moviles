@@ -21,7 +21,7 @@ class Main_Activity : AppCompatActivity() {
         }
 
         btnSalir.setOnClickListener {
-            finishAffinity() // Cierra la app por completo
+            finishAffinity()
         }
     }
 }

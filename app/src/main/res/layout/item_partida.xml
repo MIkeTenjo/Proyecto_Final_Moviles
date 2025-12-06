@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="70dp"
     android:gravity="center_vertical"
-    android:background="@color/purple_200"
+    android:background="@color/boton_texto"
     android:layout_marginBottom="10dp">
 
     <TextView
@@ -21,8 +21,8 @@
         android:id="@+id/btnEliminar"
         android:layout_width="80dp"
         android:layout_height="40dp"
-        android:text="Borrar"
-        android:background="@android:color/holo_red_dark"
+        android:text="@string/borrar"
+        android:background="@color/purple_200"
         android:textColor="@android:color/white"/>
 
 </LinearLayout>
